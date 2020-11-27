@@ -87,7 +87,9 @@ export class NewsDB extends Dexie {
 
             if((_articlesCache[0].saveTime.getTime() - (new Date()).getTime()) > 5*60*1000) {
                 console.log('Already cached, but expired, retrieving again.');
-                await this.article.clear();
+
+                await this.article.filter(c=>(c.articleCountry===countryCode &&c.saveStatus==false)).delete();
+
                 this.http.get<any>(_newsEndpoint, {params:this.queryParams, headers:this.headers}).toPromise().then(response=>{
 
                     _articleList = response.articles.map(article => {
