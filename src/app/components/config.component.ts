@@ -25,4 +25,12 @@ export class ConfigComponent implements OnInit {
     this.router.navigate(['/country-list']);
   }
 
+  goBack(){
+    this.router.navigate(['/country-list']);
+  }
+
+  deleteApiKey(){
+    this.newsDB.deleteApiKey(this.form.get('apiKey').value);
+  }
+
 }

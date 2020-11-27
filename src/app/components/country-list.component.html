@@ -1,4 +1,8 @@
-<button [routerLink]="['/config']">Settings</button>
-<ul *ngFor="let country of countryList">
-    <li [routerLink]="['/news-list',country.countryCode]">{{country.countryName}} <img src="{{country.countryFlag}}"></li>
+<div class="d-flex justify-content-end">
+    <button class="btn btn-primary mt-5 mb-2" [routerLink]="['/config']">Settings</button>
+</div>
+
+
+<ul *ngFor="let country of countryList" class="list-group mt-1">
+    <li [routerLink]="['/news-list',country.countryCode]" class="list-group-item">{{country.countryName}} <img src="{{country.countryFlag}}"></li>
 </ul>

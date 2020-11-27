@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NewsDB } from '../services/news.database';
-import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +12,7 @@ export class HomeComponent implements OnInit {
   apiKeyStatus: boolean = false;
   apiKey: string;
 
-  constructor(private newsService: NewsService, private newsDB: NewsDB, private router: Router) { }
+  constructor(private newsDB: NewsDB, private router: Router) { }
 
   ngOnInit(): void {
     this.newsDB.getApiKey().then( response => {

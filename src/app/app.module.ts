@@ -9,7 +9,6 @@ import { ConfigComponent } from './components/config.component';
 import { CountryListComponent } from './components/country-list.component';
 import { NewsListComponent } from './components/news-list.component';
 
-import { NewsService } from './services/news.service';
 import { NewsDB } from './services/news.database';
 import { HomeComponent } from './components/home.component';
 
@@ -24,7 +23,7 @@ import { HomeComponent } from './components/home.component';
     HttpClientModule
   ],
   providers: [
-    NewsDB, NewsService
+    NewsDB
   ],
   bootstrap: [AppComponent]
 })

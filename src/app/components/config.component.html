@@ -1,5 +1,7 @@
-<form [formGroup]="form" (ngSubmit)="processForm()">
-    <label for="apiKey">Enter your API Key : </label>
-    <input type="text" formControlName="apiKey" id="apiKey">
-    <button type="submit" [disabled]="form.invalid">Submit</button>
+<form [formGroup]="form" (ngSubmit)="processForm()" class="form-group">
+    <label for="apiKey" class="mt-5">Enter your API Key : </label>
+    <input type="text" formControlName="apiKey" id="apiKey" class="form-control">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-primary mt-3">Submit</button>
 </form>
+<button class="btn btn-primary" (click)="goBack()">Back</button>
+<button class="btn btn-warning" [disabled]="form.invalid" (click)="deleteApiKey()">Delete</button>
