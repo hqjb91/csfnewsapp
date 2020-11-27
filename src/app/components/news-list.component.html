@@ -4,14 +4,16 @@
 
 <ul *ngFor="let article of newsList; let i = index" class="list-group mt-3">
     
+
         <a href="{{article.url}}" class="list-group-item list-group-item-action">
             <img src="{{article.img}}" alt="" style="height:15vh; float:left; margin-right:2em">
-            <h4>{{article.title}}</h4> <hr> 
-            <p style="height:3vh; clear:left">Author : {{article.author}}</p> 
-            <p style="height:3vh; clear:left">Source : {{article.sourceName}}</p>
-            <p style="height:3vh; clear:left">Content : {{article.content}}</p>
-            <p style="height:3vh; clear:left">Author : {{article.author}}</p>
+            <h6>{{article.title}}</h6>
+            <p style="clear:left">Author : {{article.author}}</p> 
+            <p style="clear:left">Source : {{article.sourceName}}</p>
+            <p style="clear:left">Content : {{article.content}}</p>
+            <p style="clear:left">Author : {{article.author}}</p>
             Click to read more 
         </a>
+        <button (click)="saveArticle(article.articleID)" class="btn btn-primary btn-sm">Save Article</button>
 
 </ul>

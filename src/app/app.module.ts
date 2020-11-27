@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from "@angular/common";
 
 import { AppComponent } from './app.component';
 import { ConfigComponent } from './components/config.component';
@@ -20,7 +21,7 @@ import { HomeComponent } from './components/home.component';
   imports: [
     BrowserModule, AppRoutingModule,
     FormsModule, ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, CommonModule
   ],
   providers: [
     NewsDB
