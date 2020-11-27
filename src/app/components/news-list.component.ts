@@ -36,4 +36,8 @@ export class NewsListComponent implements OnInit {
   goBack(){
     this.router.navigate(['/country-list']);
   }
+
+  saveArticle(articleID: string){
+    this.newsDB.saveArticle(articleID);
+  }
 }

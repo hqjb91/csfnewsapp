@@ -171,4 +171,10 @@ export class NewsDB extends Dexie {
             return _articleList;
         }
     }
+
+    async saveArticle(articleID: string){
+        const temp = await this.article.get(articleID);
+        temp.saveStatus = true;
+        this.article.put(temp, articleID);
+    }
 }
