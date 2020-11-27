@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "csfnewsapp"
+  "defaultProject": "csfnewsapp",
+  "cli": {
+    "analytics": false
+  }
 }
