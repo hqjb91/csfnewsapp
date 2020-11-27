@@ -1,1 +1,4 @@
-<p>country-list works!</p>
+<button [routerLink]="['/config']">Settings</button>
+<ul *ngFor="let country of countryList">
+    <li [routerLink]="['/news-list',country.countryCode]">{{country.countryName}} <img src="{{country.countryFlag}}"></li>
+</ul>

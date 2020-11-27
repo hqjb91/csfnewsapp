@@ -1,1 +1,5 @@
-<p>config works!</p>
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <label for="apiKey">Enter your API Key : </label>
+    <input type="text" formControlName="apiKey" id="apiKey">
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

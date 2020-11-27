@@ -1,1 +1,14 @@
-<p>news-list works!</p>
+
+<button (click)="goBack()">Back</button>
+You are viewing articles from {{countryName}} :
+
+<ul *ngFor="let article of newsList; let i = index">
+    
+    <img src="{{article.img}}" alt="">
+    <li>{{article.title}}</li>
+    <p>{{article.author}}</p>
+    <p>{{article.content}}</p>
+    <p>{{article.sourceName}}</p>
+    <a href="{{article.url}}">Click Here to read more ..</a>
+    <hr>
+</ul>
